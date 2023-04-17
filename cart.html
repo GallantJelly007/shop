@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fashion - Cart</title>
+	<link rel="stylesheet" href="./css/faststyle.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon">
+	<script src="./js/script.js"></script>
+	<script src="./js/ajax.js"></script>
+</head>
+<body id="cart-page">
+	<div class="popup-back main-padding">
+		<div id="popup-message" class="popup-message d-flex fd-col p-10 maxw-35 maxw-m-100">
+			<button class="button mt-20 popup-button" data-target="popup-message">ОК</button>
+		</div>
+	</div>
+	<div class="container h-100">
+		<header class="header main-padding d-flex ai-center jc-bspace pv-10">
+			<p class="d-flex fsz-20 fsz-m-15 fw-500 c-coral">
+				<span class="fw-800 c-black">F</span>ashion
+			</p>
+			<nav class="d-flex ai-center">
+				<div id="nav-bg" class="nav-bg">
+					<ul id="nav-menu" class="d-flex fd-m-col nav-menu c-coral fw-bold ai-center">
+						<li class="nav-menu-item"><a href="index.html">HOME</a></li>
+						<li class="nav-menu-item"><a href="catalog.html">CATALOG</a></li>
+					</ul>
+				</div>
+				<a href="cart.html" class="abutton cart pos-rel ml-20">
+					<span class="product-counter">33</span>
+				</a>
+				<button id="nav-menu-btn" class="nav-menu-btn d-none d-m-flex ml-m-10">	
+				</button>
+			</nav>
+		</header>
+		<main class="d-flex main-padding pv-20 fd-col">
+			<div class="d-flex jc-bspace ai-center w-100 fd-m-col">
+				<h2 class="fsz-15 fw-bold mb-m-05">Моя корзина</h2>
+				<p class="fw-bold t-m-right">Добавлено товаров: <span id="p-counter">0</span></p>
+			</div>
+			<hr class="delimiter mb-0">
+			<div class="d-flex d-none no-product w-100 fsz-12 fw-bold ajc-center t-center">
+				Вы пока не добавили ни одного товара в корзину
+			</div>
+			<div class="d-flex fd-col">
+				<ul class="my-cart d-flex fd-col fd-ml-row fw-ml-wrap">
+					<li class="d-flex cart-item pv-10 fd-m-col maxw-ml-45 ml-ml-20 p-m-15">	
+						<img class="w-15 w-m-80 as-center" src="./images/2.png" alt="">
+						<div class="d-flex fd-col ml-20 ml-m-0 mb-m-15 jc-bspace flex-1">
+							<div>
+								<p class="fsz-09 fw-bold mb-10">Товар №1234 - Толстовка</p>
+								<p class="fsz-09">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eveniet ullam totam repudiandae. Sunt, ab, quas. Similique deleniti omnis itaque repellendus eligendi non explicabo, maiores inventore beatae, dicta architecto vel.</p>
+							</div>
+							<button class="close-button fw-bold as-start mt-10 mt-m-15">✕ Убрать из корзины</button>
+						</div>
+						<div class="d-flex w-25 w-m-100 ml-20 ml-m-0">
+							<div class="d-flex fd-col as-center ai-center w-65">
+								<div class="d-flex fd-col fd-m-row ai-center fsz-08 mb-10 w-100">
+									<p class="mb-05 mb-m-0 ws-nowrap">Стоимость за шт:</p>
+									<p class="fw-bold ml-m-05">100$</p>
+								</div>
+								<div class="d-flex fd-m-row fd-col ai-center pay-item w-100 pt-10">
+									<p class="fw-bold mb-05 mb-m-0 fsz-09">К оплате:</p>
+									<p class="fsz-12 fw-bold ml-m-05">100$</p>
+								</div>
+							</div>
+							<div class="switch-product-count  ml-20 d-flex fd-col as-center w-35">
+								<button class="counter-arrow"><span>&#10094;</span></button>
+								<input class="fw-bold fsz-12 w-100 counter-input" type="text" data-pid="" value="1">
+								<button class="counter-arrow"><span>&#10095;</span></button>
+							</div>
+						</div>
+					</li>
+					<li class="d-flex cart-item pv-10 fd-m-col maxw-ml-45 ml-ml-20 p-m-15">	
+						<img class="w-15 w-m-80 as-center" src="./images/2.png" alt="">
+						<div class="d-flex fd-col ml-20 ml-m-0 mb-m-15 jc-bspace flex-1">
+							<div>
+								<p class="fsz-09 fw-bold mb-10">Товар №1234 - Толстовка</p>
+								<p class="fsz-09">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eveniet ullam totam repudiandae. Sunt, ab, quas. Similique deleniti omnis itaque repellendus eligendi non explicabo, maiores inventore beatae, dicta architecto vel.</p>
+							</div>
+							<button class="close-button fw-bold as-start mt-10 mt-m-15">✕ Убрать из корзины</button>
+						</div>
+						<div class="d-flex w-25 w-m-100 ml-20 ml-m-0">
+							<div class="d-flex fd-col as-center ai-center w-65">
+								<div class="d-flex fd-col fd-m-row ai-center fsz-08 mb-10 w-100">
+									<p class="mb-05 mb-m-0 ws-nowrap">Стоимость за шт:</p>
+									<p class="fw-bold ml-m-05">100$</p>
+								</div>
+								<div class="d-flex fd-m-row fd-col ai-center pay-item w-100 pt-10">
+									<p class="fw-bold mb-05 mb-m-0 fsz-09">К оплате:</p>
+									<p class="fsz-12 fw-bold ml-m-05">100$</p>
+								</div>
+							</div>
+							<div class="switch-product-count  ml-20 d-flex fd-col as-center w-35">
+								<button class="counter-arrow"><span>&#10094;</span></button>
+								<input class="fw-bold fsz-12 w-100 counter-input" type="text" data-pid="" value="1">
+								<button class="counter-arrow"><span>&#10095;</span></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="d-flex fd-m-col jc-bspace ai-center pay-block pt-20">
+					<p class="mb-m-20">ИТОГО К ОПЛАТЕ: <span class="fw-bold fsz-12">100$</span></p>
+					<button id="place-order-button" class="button popup-button" data-target="popup-message">Оформить заказ</button>
+				</div>
+			</div>
+
+		</main>
+	</div>
+</body>
+</html>

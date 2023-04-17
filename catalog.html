@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fashion - Catalog</title>
+	<link rel="stylesheet" href="./css/faststyle.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="./images/icons/favicon.ico" type="image/x-icon">
+	<script src="./js/script.js"></script>
+	<script src="./js/ajax.js"></script>
+</head>
+<body id="catalog-page">
+	<div class="container h-100">
+		<header class="header main-padding d-flex ai-center jc-bspace pv-10">
+			<p class="d-flex fsz-20 fsz-m-15 fw-500 c-coral">
+				<span class="fw-800 c-black">F</span>ashion
+			</p>
+			<nav class="d-flex ai-center">
+				<div id="nav-bg" class="nav-bg">
+					<ul id="nav-menu" class="d-flex fd-m-col nav-menu c-coral fw-bold ai-center">
+						<li class="nav-menu-item"><a href="index.html">HOME</a></li>
+						<li class="nav-menu-item"><a href="catalog.html">CATALOG</a></li>
+					</ul>
+				</div>
+				<a href="cart.html" class="abutton cart pos-rel ml-20">
+					<span class="product-counter">33</span>
+				</a>
+				<button id="nav-menu-btn" class="nav-menu-btn d-none d-m-flex ml-m-10">	
+				</button>
+			</nav>
+		</header>
+		<main class="d-flex main-padding pv-20 fd-m-col">
+			<button class="filter-btn bg-transparent pv-05 fw-bold d-m-flex d-none ai-center as-start deploy-btn" data-target="filters" data-active-class="filter-btn-active">Фильтры<span class="button-img filter-img ml-10"></span>
+			</button>
+			<aside id="filters" class="filters w-20 w-m-100 ov-hidden flex-2 mt-m-10 flex-m-none d-flex fd-col h-m-0">
+				<div class="d-flex fd-col">
+					<p class="fw-bold fsz-09 ml-0 mb-10">Цена</p>
+					<div class="d-flex">
+						<input class="flex-1 input-text" type="text" placeholder="Цена от:">
+						<input class="ml-10 flex-1 input-text" type="text" placeholder="Цена до:">
+					</div>
+					<hr class="delimiter">	
+					<p class="fw-bold fsz-09 mb-10">Бренды</p>
+					<ul class="ml-10 check-filter">
+						<li class="d-flex ai-center">
+							<input type="checkbox" name="" id=""><span>Бренд 1</span>
+						</li>
+						<li class="d-flex ai-center">
+							<input type="checkbox" name="" id=""><span>Бренд 2</span>
+						</li>
+						<li class="d-flex ai-center">
+							<input type="checkbox" name="" id=""><span>Бренд 3</span>
+						</li>
+						<li class="d-flex ai-center">
+							<input type="checkbox" name="" id=""><span>Бренд 4</span>
+						</li>
+					</ul>
+					<hr class="delimiter">	
+					<button id="add-filter-button" class="button fsz-09 mb-10">Применить фильтры</button>
+				</div>
+			</aside>
+			<article class="flex-6 w-50 w-m-100 ml-20 ml-m-0 mt-m-10">
+				<section class="d-flex fw-wrap">
+					<div class="d-flex fd-col card minw-25 maxw-30 minw-m-100 flex-1 p-10">
+						<div class="h-60 d-flex ajc-center ov-hidden">
+							<img class="w-100" src="images/1.png" alt="">
+						</div>
+						<p class="mt-10 fw-bold">Куртка зимняя</p>
+						<p class="fsz-08 fw-bold mt-10">Бренд: <span class="fw-normal">Бренд</span></p>
+						<p class="fsz-09 mt-10">Lorem ipsum dolor sit amet consectetur </p>
+						<div class="d-flex ai-center jc-bspace mv-10">
+							<p class="price fw-bold ">Цена</p>
+							<p class="price fw-bold fsz-12">100$</p>
+						</div>
+						<button class="add-product-button button fsz-08" data-pid="">🛒 В корзину</button>
+					</div>
+					<div class="d-flex fd-col card minw-25 maxw-30 minw-m-100 flex-1 p-10">
+						<div class="h-60 d-flex ajc-center ov-hidden">
+							<img class="w-100" src="images/1.png" alt="">
+						</div>
+						<p class="mt-10 fw-bold">Куртка зимняя</p>
+						<p class="fsz-08 fw-bold mt-10">Бренд: <span class="fw-normal">Бренд</span></p>
+						<p class="fsz-09 mt-10">Lorem ipsum dolor sit amet consectetur </p>
+						<div class="d-flex ai-center jc-bspace mv-10">
+							<p class="price fw-bold ">Цена</p>
+							<p class="price fw-bold fsz-12">100$</p>
+						</div>
+						<button class="add-product-button button fsz-08" data-pid="">🛒 В корзину</button>
+					</div>
+					<div class="d-flex fd-col card minw-25 maxw-30 minw-m-100 flex-1 p-10">
+						<div class="h-60 d-flex ajc-center ov-hidden">
+							<img class="w-100" src="images/1.png" alt="">
+						</div>
+						<p class="mt-10 fw-bold">Куртка зимняя</p>
+						<p class="fsz-08 fw-bold mt-10">Бренд: <span class="fw-normal">Бренд</span></p>
+						<p class="fsz-09 mt-10">Lorem ipsum dolor sit amet consectetur </p>
+						<div class="d-flex ai-center jc-bspace mv-10">
+							<p class="price fw-bold ">Цена</p>
+							<p class="price fw-bold fsz-12">100$</p>
+						</div>
+						<button class="add-product-button button fsz-08" data-pid="">🛒 В корзину</button>
+					</div>
+					<div class="d-flex fd-col card minw-25 maxw-30 minw-m-100 flex-1 p-10">
+						<div class="h-60 d-flex ajc-center ov-hidden">
+							<img class="w-100" src="images/1.png" alt="">
+						</div>
+						<p class="mt-10 fw-bold">Куртка зимняя</p>
+						<p class="fsz-08 fw-bold mt-10">Бренд: <span class="fw-normal">Бренд</span></p>
+						<p class="fsz-09 mt-10">Lorem ipsum dolor sit amet consectetur </p>
+						<div class="d-flex ai-center jc-bspace mv-10">
+							<p class="price fw-bold ">Цена</p>
+							<p class="price fw-bold fsz-12">100$</p>
+						</div>
+						<button class="add-product-button button fsz-08" data-pid="">🛒 В корзину</button>
+					</div>
+					<div class="d-flex fd-col card minw-25 maxw-30 minw-m-100 flex-1 p-10">
+						<div class="h-60 d-flex ajc-center ov-hidden">
+							<img class="w-100" src="images/1.png" alt="">
+						</div>
+						<p class="mt-10 fw-bold">Куртка зимняя</p>
+						<p class="fsz-08 fw-bold mt-10">Бренд: <span class="fw-normal">Бренд</span></p>
+						<p class="fsz-09 mt-10">Lorem ipsum dolor sit amet consectetur </p>
+						<div class="d-flex ai-center jc-bspace mv-10">
+							<p class="price fw-bold ">Цена</p>
+							<p class="price fw-bold fsz-12">100$</p>
+						</div>
+						<button class="add-product-button button fsz-08" data-pid="">🛒 В корзину</button>
+					</div>
+					<div class="d-flex fd-col card minw-25 maxw-30 minw-m-100 flex-1 p-10">
+						<div class="h-60 d-flex ajc-center ov-hidden">
+							<img class="w-100" src="images/1.png" alt="">
+						</div>
+						<p class="mt-10 fw-bold">Куртка зимняя</p>
+						<p class="fsz-08 fw-bold mt-10">Бренд: <span class="fw-normal">Бренд</span></p>
+						<p class="fsz-09 mt-10">Lorem ipsum dolor sit amet consectetur </p>
+						<div class="d-flex ai-center jc-bspace mv-10">
+							<p class="price fw-bold">Цена</p>
+							<p class="price fw-bold fsz-12">100$</p>
+						</div>
+						<button class="add-product-button button fsz-08" data-pid="">🛒 В корзину</button>
+					</div>
+				</section>
+				<section class="d-flex ai-center jc-bspace mt-30 page-control">
+					<div class="d-flex l-page-buttons flex-1 maxw-25 maxw-m-none">
+						<button class="page-button ph-0 w-50" id="prev-list-page">&#10094;&#10094;</button>
+						<button class="page-button ph-0 w-50" id="prev-page">&#10094;</button>	
+					</div>
+					<ul class="page-control-menu d-flex ai-center d-m-none">
+						<li class="page-control-item mh-20 mh-m-10 fw-bold page-control-item-active">1</li>
+						<li class="page-control-item mh-15 mh-m-10 fw-bold">2</li>
+						<li class="page-control-item mh-15 mh-m-10 fw-bold">3</li>
+						<li class="page-control-item mh-15 mh-m-10 fw-bold">4</li>
+						<li class="page-control-item mh-15 mh-m-10 fw-bold">5</li>
+					</ul>
+					<div class="d-flex r-page-buttons flex-1 maxw-25 maxw-m-none">
+						<button class="page-button ph-0 w-50" id="next-page">&#10095;</button>
+						<button class="page-button ph-0 w-50" id="next-list-page">&#10095;&#10095;</button>
+					</div>
+				</section>
+			</article>
+		</main>
+		<footer>
+
+		</footer>
+	</div>
+</body>
+</html>
